@@ -1,6 +1,5 @@
 from unittest import TestCase
-from line_overlapper import are_line_segments_overlapping
-import unittest.mock
+from line_overlapper import are_line_segments_overlapping, InvalidCoordinateFormatError
 
 
 class LineOverLapTest(TestCase):
@@ -29,3 +28,10 @@ class LineOverLapTest(TestCase):
         line_1 = [-2, -6]
         line_2 = [-17, -11]
         self.assertFalse(are_line_segments_overlapping(line_1, line_2))
+
+    def test_line_segments_raises_error(self):
+        line_1 = [-2, 'a']
+        line_2 = [-17, -11]
+
+        with self.assertRaises(InvalidCoordinateFormatError):
+            are_line_segments_overlapping(line_1, line_2)
