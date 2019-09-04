@@ -30,7 +30,7 @@ def are_line_segments_overlapping(line1, line2):
             return False
     except TypeError:
         # Raise custom error for invalid version format string
-        print('Invalid version string format supplied')
+        print('Invalid coordinates format supplied')
         raise InvalidCoordinateFormatError('Invalid coordinate value supplied')
 
 # main method for standalone run
