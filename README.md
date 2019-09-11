@@ -13,7 +13,15 @@ returns False if the lines dont overalp. If supplied input is invalid then raise
 based on that it does the compare using regular arithmetic operator.</p>
 <br/>
 <b>Usage:</b>
-<pre>   line_1 = [-2, -6] <br/>
-        line_2 = [-17, -11] <br/>
-        are_line_segments_overlapping(line_1, line_2)</br>
-        </pre>
+<pre>line_1 = [-2, -6] <br/>
+     line_2 = [-17, -11] <br/>
+      are_line_segments_overlapping(line_1, line_2)</br>
+        </pre> </br>
+  <b>Test Cases:</b><br/>
+  This function tested based on the following test cases:</br>
+  1> If two lines overlaps  on x axis  positive side. Both lines are on positive side of x axis.</br>
+  2> If two lines overlaps on x axis negetive side. Both lines are on negative side of x axis.</br>
+  3> If two lines does not overlap on positive side of x axis. Both lines are on positive side of x axis.</br>
+  4> If two lines does not overlap on negative side of x axis. </br>In this case one line exist on positive side of xaxis and  another one in negative side of x axis.</br>
+  5> If two lines does not overlap on both belonging to negative side of x axis.</br>
+  
